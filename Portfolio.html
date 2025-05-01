@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <div class="logo">Cédric Bouché</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul id="menu" class="hidden">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#work" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <video id="heroVideo" autoplay muted loop>
+            <source src="Thumb_1.mp4" type="video/mp4" >
+            Je browser ondersteunt deze video niet.
+        </video>
+        <div class="content">
+            <h1>VIDEO CONTENT CREATOR</h1>
+            <a href="#work" class="btn">Bekijk mijn werk</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Over Mij</h2>
+                    <p>Hallo, ik ben Cédric Bouché! Als video editor en video content creator ben ik gepassioneerd door het creëren van video's die anderen inspireren. Mijn doel is om verhalen tot leven te brengen en de essentie van elke boodschap vast te leggen. Of het nu gaat om een documentaire, een promotievideo of creatieve content voor sociale media, ik geloof dat video een krachtig middel is om mensen te raken en te motiveren. Laten we samen werken aan iets moois!</p>
+                    <a href="#contact" class="contact-button">Laten we samenwerken!</a> <!-- Call to action knop -->
+                </div>
+                <img src="IMG_2443.JPG" alt="Cédric Bouché" class="about-image"> <!-- Voeg hier je foto toe -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Work Section -->
+    <section id="work" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="collage-grid">
+                <!-- Video Project 1 -->
+                <div class="collage-item">
+                    <video class="collage-video" controls muted autoplay loop playsinline>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                        Je browser ondersteunt de video-tag niet.
+                    </video>
+                    <div class="video-info">
+                        <h3>t'leven</h3>
+                        <p>Video over de verschillende fases van t'leven</p>
+                        <!-- <p>Korte beschrijving van project 1</p> -->
+                    </div>
+                </div>
+                <!-- Video Project 2 -->
+                <div class="collage-item">
+                    <video class="collage-video" controls muted autoplay loop playsinline>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                        Je browser ondersteunt de video-tag niet.
+                    </video>
+                    <div class="video-info">
+                        <h3>De ziëje</h3>
+                        <p>Een experimentele video van beeldcompositie.</p>
+                        <!-- <p>Ne video over een stik van water en zand.
+
+                            Camera: Nikon D5100
+                            Geluid: Rode Shotgun NTG4 & ZOOM H4n PRO
+                            Edit: Adobe Premiere Pro en Adobe Audition</p> -->
+                    </div>
+                </div>
+                <!-- Video Project 3 -->
+                <div class="collage-item">
+                    <video class="collage-video" controls muted autoplay loop playsinline>
+                        <source src="videos/vide3.mp4" type="video/mp4">
+                        Je browser ondersteunt de video-tag niet.
+                    </video>
+                    <div class="video-info">
+                        <h3>Dubbel Uniek</h3>
+                        <p>Intieme docuemntaire over de unieke band van tweelingen</p>
+                    </div>
+                </div>
+                   <!-- Video Project 4 -->
+                   <div class="collage-item">
+                    <video class="collage-video" controls muted autoplay loop playsinline>
+                        <source src="videos/vide4.mp4" type="video/mp4">
+                        Je browser ondersteunt de video-tag niet.
+                    </video>
+                    <div class="video-info">
+                        <h3>t'landbouwleven</h3>
+                        <p>Ludieke reclamespotje voor het landbouwleven </p>
+                    </div>
+                </div>
+
+                <!-- Voeg meer projecten toe zoals hierboven -->
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <!-- Linkerkant: Contactgegevens -->
+            <div class="contact-info">
+                <h3>Cédric Bouché</h3>
+                <p>Adres: Schooldreef 79, 8730 Beernem</p>
+                <p>Telefoon: <a href="tel:+32472310762">+32 472 31 07 62</a></p>
+                <p>E-mail: <a href="mailto:cedric.bouche@hotmail.com">cedric.bouche@hotmail.com</a></p>
+            </div>
+            
+            <!-- Rechterkant: Contactformulier -->
+            <div class="contact-form">
+                <h2>Neem Contact Op</h2>
+                <form id="contactForm" method="post" action="send_email.php">
+                    <div class="form-group">
+                        <label for="name">Naam:</label>
+                        <input type="text" id="name" name="name" required placeholder="Vul je naam in...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Vul je e-mail in...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Bericht:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Schrijf je bericht hier..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Verstuur</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cedric.bouche/" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@cedricbouche7198" target="_blank" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://vimeo.com/user155151622" target="_blank" class="social-icon" aria-label="Vimeo">
+                    <i class="fab fa-vimeo"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Scroll Down Button -->
+<div class="scroll-down">
+    <a href="#about">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+</div>
+
+
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const aboutContent = document.querySelector('.about-content');
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutContent.classList.add('visible'); // Voeg de class toe als de sectie in beeld komt
+                    observer.unobserve(entry.target); // Stop met observeren
+                }
+            });
+        });
+    
+        observer.observe(aboutContent); // Observeer de about-content sectie
+    });
+    </script>
+    
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+    
+        // Standaard de Home-link als actief instellen
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Verwijder de 'active' class van alle links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                // Voeg de 'active' class toe aan de geklikte link
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function() {
+    alert('Bedankt voor je bericht! Ik neem snel contact met je op.');
+}); </script>
+
+</body>
+</html>
